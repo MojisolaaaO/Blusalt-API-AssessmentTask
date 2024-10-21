@@ -1,0 +1,15 @@
+{
+  "name": "blusalt-api-assessmenttask",
+  "version": "1.0.0",
+  "description": "This repository contains automated API test scripts designed to validate the registration and login proccesses for [Open Cart](https://demo.opencart.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.0"
+  }
+}
