@@ -1,12 +1,15 @@
 describe('API Test Script for Account Registration', () => {
     const baseUrl = Cypress.env("baseUrl")
-    it('should successfully register', () => {
+    const apiKey = Cypress.env("apiKey")
+    it('should register successfully', () => {
 
         cy.request({
             method: 'POST',
             url: `${baseUrl}/register`,
             headers: {
+                'Authorization': `API Key ${apiKey}`,
                 'Content-Type': 'application/json',
+                'Accept': 'application/json',
             },
             body: {
                 firstname: 'test',
@@ -16,6 +19,7 @@ describe('API Test Script for Account Registration', () => {
             },
         }).then((response) => {
             expect(response.status).to.eq(200)
+            expect(response.statusText).to.eq('OK')
 
         });
     });
