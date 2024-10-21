@@ -17,6 +17,7 @@ describe('API Test Script for Login', () => {
             },
         }).then((response) => {
             expect(response.status).to.eq(200)
+            expect(response.statusText).to.eq('OK')
 
         });
     });
